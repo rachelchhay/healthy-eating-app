@@ -1,3 +1,26 @@
+# Healthy-Eating-App
+GA Project 5
+
+[![Stories in Ready](https://badge.waffle.io/rachelchhay/healthy-eating-app.png?label=ready&title=Ready)](http://waffle.io/rachelchhay/healthy-eating-app)
+
+## User Story:
+- User can search for recipes
+- User can add/edit/delete their own recipe
+- User can rate recipes
+
+## MVP:
+- MERN stack app
+- Use a third party API to search
+- Full CRUD for added recipes
+- Rating system
+- Portfolio-like CSS
+
+## Stretch Goals:
+- User can add/edit/delete comments they leave on recipes
+- User auth
+- Use SASS
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
