@@ -12,15 +12,9 @@ app.use(bodyParser.json());
 
 
 
-// Router
-router.get('/', (req, res) => {
-  res.json({ message: 'API initialized!' });
-});
-app.use('/api', router);
-
  // Controller
- // const postsController = require('./controllers/posts.js');
- // app.use('/posts', postsController);
+ const postsController = require('./controllers/posts.js');
+ app.use('/posts', postsController);
 
 // Database
 mongoose.Promise = global.Promise;
