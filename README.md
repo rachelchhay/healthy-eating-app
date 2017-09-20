@@ -5,13 +5,13 @@ GA Project 5
 
 ## User Story:
 - User can search for recipes
-- User can add/edit/delete their own recipe
-- User can rate recipes
+- User can add/edit/delete their own blog post on healthy eating
+- User can rate posts
 
 ## MVP:
 - MERN stack app
 - Use a third party API to search
-- Full CRUD for added recipes
+- Full CRUD for added posts
 - Rating system
 - Portfolio-like CSS
 
