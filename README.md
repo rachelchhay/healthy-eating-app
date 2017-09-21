@@ -5,20 +5,21 @@ GA Project 5
 
 ## User Story:
 - User can search for recipes
-- User can add/edit/delete their own blog post on healthy eating
-- User can rate posts
+- User can save their favorite recipes from the API
+- User can add/edit/delete their own recipe post on healthy eating
+
 
 ## MVP:
 - MERN stack app
 - Use a third party API to search
-- Full CRUD for added posts
-- Rating system
+- Full CRUD for added recipe posts
 - Portfolio-like CSS
 
 ## Stretch Goals:
 - User can add/edit/delete comments they leave on recipes
 - User auth
 - Use SASS
+- User can rate posts
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
