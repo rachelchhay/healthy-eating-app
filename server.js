@@ -10,9 +10,7 @@ const cors = require('cors');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/test', (req, res) => {
-  res.send('Test successful')
-});
+app.use(cors());
 
  // Controller
  const postsController = require('./controllers/posts.js');

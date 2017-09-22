@@ -14,14 +14,6 @@ router.post('/', (req,res) => {
   Posts.create(req.body, (err, createdPost) => {
     res.json(createdPost);
   });
-  // var post = new Posts(req.body);
-  //   post.save()
-  // .then(post => {
-  //   res.json({message: 'Post added'})
-  // })
-  // .catch(err => {
-  //   res.send(err);
-  // });
 });
 
 
