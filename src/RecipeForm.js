@@ -41,8 +41,22 @@ class RecipeForm extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    console.log('clicked');
-    // Connect to POST method
+    this.props.onPostSubmit({
+      title: this.state.title,
+      servings: this.state.servings,
+      time: this.state.time,
+      ingredients: this.state.ingredients,
+      directions: this.state.directions,
+      author: this.state.author
+    });
+    this.setState({
+      title: '',
+      servings: '',
+      time: '',
+      ingredients: '',
+      directions: '',
+      author: ''
+    });
   }
 
   render() {

@@ -7,11 +7,11 @@ class Recipe extends Component {
       return (
         <div key={i}>
           <h2>{post.title}</h2>
-          <h3>{post.servings}</h3>
-          <h3>{post.time}</h3>
-          <p>{post.ingredients}</p>
-          <p>{post.directions}</p>
-          <h4><i>{post.author}</i></h4>
+          <h3>Servings: {post.servings}</h3>
+          <h3>Cooking Time: {post.time}</h3>
+          <p><strong>Ingredients:</strong> {post.ingredients}</p>
+          <p><strong>Directions:</strong> {post.directions}</p>
+          <h4>Author: <i>{post.author}</i></h4>
         </div>
       )
     });

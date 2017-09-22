@@ -3,6 +3,7 @@ import './index.css';
 import Recipe from './Recipe';
 import RecipeForm from './RecipeForm';
 import axios from 'axios';
+const URL = 'http://localhost:3100/posts';
 
 
 class RecipeList extends Component {
@@ -16,18 +17,28 @@ class RecipeList extends Component {
   }
 
   getPosts() {
-    axios.get('http://localhost:3100/posts')
+    axios.get(URL)
     .then(res => {
       this.setState({ data: res.data });
     })
   }
 
   handlePostSubmit(post) {
-    // Add POST request
+    let posts = this.state.data;
+    let newPosts = posts.concat([post]);
+    this.setState({ data: newPosts });
+    axios.post(URL, post)
+    .then(res => {
+      this.setState({ data: posts });
+    })
+    .catch(err => {
+      console.log(err);
+    });
   }
 
   componentDidMount() {
     this.getPosts();
+    setInterval(this.getPosts, this.props.pollInterval);
   }
 
   render() {
