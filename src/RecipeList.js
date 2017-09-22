@@ -3,7 +3,7 @@ import './index.css';
 import Recipe from './Recipe';
 import RecipeForm from './RecipeForm';
 import axios from 'axios';
-const URL = 'http://localhost:3100/posts';
+const URL = 'http://localhost:3001/posts';
 
 
 class RecipeList extends Component {
