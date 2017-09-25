@@ -25,9 +25,13 @@ class SearchRecipe extends Component {
 
   search() {
     let { ingredients, dish } = this.state;
-    const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
-    console.log('STATE:', this.state);
-    console.log('URL:', url);
+    const url = `http://crossorigin.me/http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
+
+    fetch(url, {
+      method: 'GET'
+    })
+    .then(response => response.json())
+    .then(json => console.log('recipes', json));
   }
 
   render() {
@@ -41,7 +45,7 @@ class SearchRecipe extends Component {
             {' '}
             <FormControl
               type="text"
-              placeholder="Ex. chicken, pasta"
+              placeholder="Ex. chicken, pesto"
               onChange={this.handleDishChange} />
           </FormGroup>
           {' '}
@@ -50,7 +54,7 @@ class SearchRecipe extends Component {
             {' '}
             <FormControl
               type="text"
-              placeholder="Ex. lasagna"
+              placeholder="Ex. salad"
               onChange={this.handleIngredientsChange} />
           </FormGroup>
           {' '}
