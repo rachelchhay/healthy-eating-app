@@ -110,7 +110,6 @@ class RecipeForm extends Component {
       </div>
     )
   }
-
 }
 
 export default RecipeForm;

@@ -1,15 +1,27 @@
+/*Color scheme
+#C98474
+#874C62
+#A7D2CB
+#F2D388*/
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: white;
+  background-color: #A7D2CB;
   padding: 5%;
+}
+
+h1 {
+  color: #874C62;
 }
 
 .nav, ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
+  background-color: #F2D388;
+  padding: 0;
 }
 
 .search {
