@@ -3,10 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: white;
+  padding: 5%;
 }
 
 .nav, ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
+}
+
+.search {
+  text-align: center;
 }
