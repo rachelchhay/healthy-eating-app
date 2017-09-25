@@ -99,7 +99,8 @@ class RecipeForm extends Component {
 
           <label>
             Author:
-            <input type="text" value={this.state.author} onChange={this.handleAuthorChange}/>
+            <input
+              type="text" value={this.state.author} onChange={this.handleAuthorChange}/>
           </label>
           <br/>
 

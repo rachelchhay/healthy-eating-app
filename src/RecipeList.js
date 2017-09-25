@@ -36,6 +36,26 @@ class RecipeList extends Component {
     });
   }
 
+  handlePostUpdate(id, post) {
+    axios.put(URL + '/' + id, post)
+    .then(res => {
+      console.log('Post updated');
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
+
+  handlePostDelete(id) {
+    axios.delete(URL + '/' + id)
+    .then(res => {
+      console.log('Post deleted');
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
+
   componentDidMount() {
     this.getPosts();
     setInterval(this.getPosts, this.props.pollInterval);
@@ -45,7 +65,10 @@ class RecipeList extends Component {
     return (
       <div>
         <h2>Blog Posts</h2>
-        <Recipe data={ this.state.data } />
+        <Recipe
+        onPostUpdate={ this.handlePostUpdate }
+        onPostDelete={ this.handlePostDelete }
+        data={ this.state.data } />
         <RecipeForm onPostSubmit={ this.handlePostSubmit }/>
       </div>
     )
@@ -54,9 +77,3 @@ class RecipeList extends Component {
 }
 
 export default RecipeList;
-
-// let recipe = this.state.data.map((post, i) => {
-//   return (
-//     <Recipe key={i} title ={post.title} text= {post.text} author = {post.author}/>
-//   )
-// })

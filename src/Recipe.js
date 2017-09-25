@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
+import EditRecipe from './EditRecipe';
 
 // add state
 class Recipe extends Component {
   render() {
-    let recipe = this.props.data.map((post, i) => {
+    let recipe = this.props.data.map(post => {
       return (
-        <div key={i}>
-          <h2>{post.title}</h2>
-          <h3>Servings: {post.servings}</h3>
-          <h3>Cooking Time: {post.time}</h3>
-          <p><strong>Ingredients:</strong> {post.ingredients}</p>
-          <p><strong>Directions:</strong> {post.directions}</p>
-          <h4>Author: <i>{post.author}</i></h4>
-        </div>
+        <EditRecipe
+        title={post.title}
+        servings={post.servings}
+        time={post.time}
+        ingredients={post.ingredients}
+        directions={post.directions}
+        author={post.author}
+        uniqueID={ post['_id'] }
+        key={ post['_id'] }
+        onPostDelete={ this.props.onPostDelete }
+        onPostUpdate={ this.props.onPostUpdate } >
+        </EditRecipe>
       )
     });
 
@@ -26,7 +31,3 @@ class Recipe extends Component {
 }
 
 export default Recipe;
-
-// <h3>{this.props.title}</h3>
-// <p>{this.props.text}</p>
-// <h4><i>{this.props.author}</i></h4>
