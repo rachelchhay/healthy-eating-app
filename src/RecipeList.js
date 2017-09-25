@@ -3,7 +3,8 @@ import './index.css';
 import Recipe from './Recipe';
 import RecipeForm from './RecipeForm';
 import axios from 'axios';
-const URL = 'http://localhost:3001/posts';
+// const URL = 'http://localhost:3001/posts';
+const URL = 'https://healthy-eating-api.herokuapp.com/posts';
 
 
 class RecipeList extends Component {
