@@ -58,7 +58,11 @@ class RecipeList extends Component {
 
   componentDidMount() {
     this.getPosts();
-    setInterval(this.getPosts, this.props.pollInterval);
+    this.interval= setInterval(this.getPosts, 1000);
+  }
+  // clear timer when component unmounts
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {

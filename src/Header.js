@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import './index.css';
+import Nav from './Nav';
+import RecipeList from './RecipeList';
+import SearchRecipe from './SearchRecipe';
+const ReactRouter = require('react-router-dom');
+const Router = ReactRouter.BrowserRouter;
+const Route = ReactRouter.Route;
+const Switch = ReactRouter.Switch;
 
-function Header () {
-  return (
-    <div>
-      <h1>Healthy Eating With Ease</h1>
 
-      <ul className='nav'>
-        <li>Home</li>
-        <li>Recipes</li>
-      </ul>
-    </div>
-  )
+class Header extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Healthy Eating With Ease</h1>
+
+        <Router>
+          <div>
+            <Nav />
+            <Switch>
+              <Route exact path='/' component={RecipeList} />
+              <Route path='/search' component={ SearchRecipe } />
+              <Route render={ () => {
+                return <h1>Page Not Found</h1>
+              }} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    )
+  }
 }
-
 
 
 
