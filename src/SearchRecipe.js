@@ -9,26 +9,21 @@ class SearchRecipe extends Component {
     super();
 
     this.state = {
-      // ingredients: '',
       dish: ''
     };
 
     this.handleDishChange = this.handleDishChange.bind(this);
-    // this.handleIngredientsChange = this.handleIngredientsChange.bind(this);
   }
 
   handleDishChange(event) {
     this.setState({ dish: event.target.value });
   }
-  // handleIngredientsChange(event) {
-  //   this.setState({ ingredients: event.target.value });
-  // }
 
   search() {
     let dish = this.state.dish;
-    const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=3a297cb6&app_key=fb0b19d078eac4a902644283d3a7ab1f&diet=low-fat'
+    // const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=3a297cb6&app_key=fb0b19d078eac4a902644283d3a7ab1f&diet=low-fat'
 
-    // const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&diet=low-fat'
+    const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&diet=low-fat'
 
 
     fetch(url, {
@@ -66,15 +61,3 @@ class SearchRecipe extends Component {
 }
 
 export default connect(null, { setRecipes }) (SearchRecipe);
-
-// const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
-
-// <FormGroup>
-//   <ControlLabel>Dish:</ControlLabel>
-//   {' '}
-//   <FormControl
-//     type="text"
-//     placeholder="Ex. salad"
-//     onChange={this.handleIngredientsChange} />
-// </FormGroup>
-// {' '}
