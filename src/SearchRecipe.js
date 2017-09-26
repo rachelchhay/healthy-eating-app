@@ -27,7 +27,7 @@ class SearchRecipe extends Component {
 
   search() {
     let { ingredients, dish } = this.state;
-    const url = `https://crossorigin.me/https://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
+    const url = `https://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
 
     fetch(url, {
       method: 'GET'
@@ -73,3 +73,5 @@ class SearchRecipe extends Component {
 }
 
 export default connect(null, { setRecipes }) (SearchRecipe);
+
+// const url = `https://crossorigin.me/https://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
