@@ -42,13 +42,14 @@ h1 {
   display: inline-block;
   text-align: left;
   width: 400px;
+  margin-right: 20px;
 }
 
 .search-img {
   display: inline-block;
   right: 0;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border: 1px solid #000;
   border-radius: 3px;

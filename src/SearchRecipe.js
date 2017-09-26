@@ -4,30 +4,31 @@ import './index.css';
 import { connect } from 'react-redux';
 import { setRecipes } from './actions';
 
-
 class SearchRecipe extends Component {
   constructor() {
     super();
 
     this.state = {
-      ingredients: '',
+      // ingredients: '',
       dish: ''
     };
 
     this.handleDishChange = this.handleDishChange.bind(this);
-    this.handleIngredientsChange = this.handleIngredientsChange.bind(this);
+    // this.handleIngredientsChange = this.handleIngredientsChange.bind(this);
   }
 
   handleDishChange(event) {
     this.setState({ dish: event.target.value });
   }
-  handleIngredientsChange(event) {
-    this.setState({ ingredients: event.target.value });
-  }
+  // handleIngredientsChange(event) {
+  //   this.setState({ ingredients: event.target.value });
+  // }
 
   search() {
-    let { ingredients, dish } = this.state;
-    const url = `https://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
+    let dish = this.state.dish;
+    const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=3a297cb6&app_key=fb0b19d078eac4a902644283d3a7ab1f&diet=low-fat'
+
+    // const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&diet=low-fat'
 
 
     fetch(url, {
@@ -35,7 +36,7 @@ class SearchRecipe extends Component {
     })
     .then(response => response.json())
     .then(json => {
-      this.props.setRecipes(json.results)
+      this.props.setRecipes(json.hits)
     });
   }
 
@@ -53,15 +54,6 @@ class SearchRecipe extends Component {
               onChange={this.handleDishChange} />
           </FormGroup>
           {' '}
-          <FormGroup>
-            <ControlLabel>Dish:</ControlLabel>
-            {' '}
-            <FormControl
-              type="text"
-              placeholder="Ex. salad"
-              onChange={this.handleIngredientsChange} />
-          </FormGroup>
-          {' '}
           <Button onClick={() => {
             this.search()
           }}>Submit</Button>
@@ -75,4 +67,14 @@ class SearchRecipe extends Component {
 
 export default connect(null, { setRecipes }) (SearchRecipe);
 
-// const url = `https://crossorigin.me/https://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
+// const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
+
+// <FormGroup>
+//   <ControlLabel>Dish:</ControlLabel>
+//   {' '}
+//   <FormControl
+//     type="text"
+//     placeholder="Ex. salad"
+//     onChange={this.handleIngredientsChange} />
+// </FormGroup>
+// {' '}
