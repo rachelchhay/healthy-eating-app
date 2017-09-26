@@ -2,7 +2,7 @@ import React, { Component }  from 'react';
 import './index.css';
 import Nav from './Nav';
 import RecipeList from './RecipeList';
-import SearchRecipe from './SearchRecipe';
+import Search from './Search';
 const ReactRouter = require('react-router-dom');
 const Router = ReactRouter.BrowserRouter;
 const Route = ReactRouter.Route;
@@ -20,7 +20,7 @@ class Header extends Component {
             <Nav />
             <Switch>
               <Route exact path='/' component={RecipeList} />
-              <Route path='/search' component={ SearchRecipe } />
+              <Route path='/search' component={ Search } />
               <Route render={ () => {
                 return <h1>Page Not Found</h1>
               }} />

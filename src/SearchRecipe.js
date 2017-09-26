@@ -1,6 +1,8 @@
 import React, { Component }  from 'react';
 import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 import './index.css';
+import { connect } from 'react-redux';
+import { setRecipes } from './actions';
 
 
 class SearchRecipe extends Component {
@@ -31,13 +33,14 @@ class SearchRecipe extends Component {
       method: 'GET'
     })
     .then(response => response.json())
-    .then(json => console.log('recipes', json));
+    .then(json => {
+      this.props.setRecipes(json.results)
+    });
   }
 
   render() {
     return (
-      <div className='search'>
-        <h1>Find A Healthy Recipe</h1>
+      <div>
 
         <Form inline>
           <FormGroup>
@@ -62,9 +65,11 @@ class SearchRecipe extends Component {
             this.search()
           }}>Submit</Button>
         </Form>
+
       </div>
+
     )
   }
 }
 
-export default SearchRecipe;
+export default connect(null, { setRecipes }) (SearchRecipe);

@@ -24,6 +24,32 @@ h1 {
   padding: 0;
 }
 
+/*Styling for Search Recipe page*/
+
 .search {
   text-align: center;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+.search-text {
+  display: inline-block;
+  text-align: left;
+  width: 400px;
+}
+
+.search-img {
+  display: inline-block;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #000;
+  border-radius: 3px;
 }
