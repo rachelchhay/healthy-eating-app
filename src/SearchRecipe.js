@@ -21,9 +21,9 @@ class SearchRecipe extends Component {
 
   search() {
     let dish = this.state.dish;
-    // const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=3a297cb6&app_key=fb0b19d078eac4a902644283d3a7ab1f&diet=low-fat'
+    const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=3a297cb6&app_key=fb0b19d078eac4a902644283d3a7ab1f&diet=low-fat'
 
-    const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&diet=low-fat'
+    // const url = 'https://api.edamam.com/search?q=' + dish + '&app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&diet=low-fat'
 
 
     fetch(url, {
