@@ -231,4 +231,13 @@ https://mentormate.com/blog/css-postit-note/*/
     font-size: 20px;
   }
 
+  .search-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .search {
+    font-size: 15px;
+  }
+
 }
