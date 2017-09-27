@@ -191,8 +191,14 @@ https://mentormate.com/blog/css-postit-note/*/
     top: 12%;
   }
 
-  .search {
+  .pineapple {
+    margin-left: 0;
+  }
 
+
+  .search-title {
+    margin-top: 150px;
+    font-size: 30px;
   }
 
 }
@@ -217,5 +223,12 @@ https://mentormate.com/blog/css-postit-note/*/
   .pineapple {
     height: 150px;
     width: auto;
+    margin-left: 2%;
   }
+
+  .search-title {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
 }
