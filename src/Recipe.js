@@ -23,7 +23,7 @@ class Recipe extends Component {
 
 
     return (
-      <div>
+      <div className="post-container">
         { recipe }
       </div>
     )

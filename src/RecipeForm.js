@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
+import './index.css';
+
 
 class RecipeForm extends Component {
   constructor(props) {
@@ -61,51 +64,45 @@ class RecipeForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="posts-form-container">
 
         <h2>Add A New Recipe</h2>
 
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Title:
-            <input type="text" value={this.state.title} onChange={this.handleTitleChange}/>
-          </label>
-          <br/>
+        <Form className="posts-form" onSubmit={this.handleSubmit}>
+          <FormGroup>
+            <ControlLabel>Title:</ControlLabel>
+            <FormControl type="text" value={this.state.title} onChange={this.handleTitleChange}/>
+          </FormGroup>
 
-          <label>
-            Servings:
-            <input type="number" value={this.state.servings} onChange={this.handleServingsChange}/>
-          </label>
-          <br/>
+          <FormGroup>
+            <ControlLabel>Servings:</ControlLabel>
+            <FormControl type="number" value={this.state.servings} onChange={this.handleServingsChange}/>
+          </FormGroup>
 
-          <label>
-            Time:
-            <input type="text"
+          <FormGroup>
+            <ControlLabel>Time:</ControlLabel>
+            <FormControl type="text"
               placeholder="1 hour and 30 mins" value={this.state.time} onChange={this.handleTimeChange}/>
-          </label>
-          <br/>
+          </FormGroup>
 
-          <label>
-            Ingredients:
-            <textarea value={this.state.ingredients} onChange={this.handleIngredientsChange}/>
-          </label>
-          <br/>
+          <FormGroup>
+            <ControlLabel>Ingredients:</ControlLabel>
+            <FormControl value={this.state.ingredients} onChange={this.handleIngredientsChange}/>
+          </FormGroup>
 
-          <label>
-            Directions:
-            <textarea value={this.state.directions} onChange={this.handleDirectionsChange}/>
-          </label>
-          <br/>
+          <FormGroup>
+            <ControlLabel>Directions:</ControlLabel>
+            <FormControl value={this.state.directions} onChange={this.handleDirectionsChange}/>
+          </FormGroup>
 
-          <label>
-            Author:
-            <input
+          <FormGroup>
+            <ControlLabel>Author:</ControlLabel>
+            <FormControl
               type="text" value={this.state.author} onChange={this.handleAuthorChange}/>
-          </label>
-          <br/>
+          </FormGroup>
 
-          <input type="submit" value="Submit" />
-        </form>
+          <input bsStyle="info" type="submit" value="Submit" />
+        </Form>
 
       </div>
     )

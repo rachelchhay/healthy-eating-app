@@ -13,7 +13,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <h1>Healthy Eating With Ease</h1>
+        <h1 className="title">Healthy Eating With Ease</h1>
 
         <Router>
           <div>

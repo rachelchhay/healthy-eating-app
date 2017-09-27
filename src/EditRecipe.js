@@ -83,7 +83,7 @@ class EditRecipe extends Component {
 
   render() {
     return (
-      <div>
+      <div className="individual-post">
         <h2>{this.props.title}</h2>
         <h3>Servings: {this.props.servings}</h3>
         <h3>Cooking Time: {this.props.time}</h3>
