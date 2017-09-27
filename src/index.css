@@ -11,16 +11,37 @@ body {
   background-color: #A7D2CB;
 }
 
+h1 {
+  font-family: 'Special Elite', cursive;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 155px;
+}
+
+.pineapple {
+  height: 300px;
+  width: auto;
+  -webkit-transform: rotate(-10deg);
+  margin-left: 5%;
+  z-index: 2;
+}
+
 .title {
   color: #874C62;
-  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 50px;
 }
 
 .nav {
   position: fixed;
-  top: 10%;
+  top: 13%;
   width: 100%;
   z-index: 1;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
 }
 
 .nav, ul {
@@ -32,11 +53,15 @@ body {
 }
 
 .posts {
-  padding: 5%;
+  padding: 0 5% 5% 5%;
+  font-family: 'Patrick Hand', cursive;
+  letter-spacing: 0.5px;
 }
 
 .blog-posts {
-  padding-left: 8%;
+  padding-right: 10%;
+  text-align: right;
+  margin-top: 0;
 }
 
 /*center forms*/
@@ -50,6 +75,7 @@ body {
   width: 70%;
   display: inline-block;
   text-align: left;
+  font-size: 20px;
 }
 
 .edit-form-container {
@@ -67,13 +93,14 @@ body {
   margin: 20px;
   background-color: #874C62;
   color: #fff;
+  font-size: 18px;
 }
 
 /*Post it code modified from
 https://mentormate.com/blog/css-postit-note/*/
 
 .individual-post {
-  line-height: 1;
+  line-height: 1.2;
   text-align:center;
   width: 80%;
   margin: 25px;
@@ -117,7 +144,9 @@ https://mentormate.com/blog/css-postit-note/*/
 
 .search {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
 }
 
 .search-title {
@@ -147,4 +176,46 @@ https://mentormate.com/blog/css-postit-note/*/
   object-fit: cover;
   border: 1px solid #000;
   border-radius: 3px;
+}
+
+@media only screen and (max-width : 720px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .blog-posts {
+    font-size: 30px;
+  }
+
+  .nav {
+    top: 12%;
+  }
+
+  .search {
+
+  }
+
+}
+
+@media only screen and (max-width : 667px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .blog-posts {
+    font-size: 30px;
+  }
+
+  .nav {
+    top: 20%;
+  }
+
+  .pineapple {
+    height: 150px;
+    width: auto;
+  }
 }

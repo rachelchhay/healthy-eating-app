@@ -132,7 +132,7 @@ class EditRecipe extends Component {
                 placeholder={this.props.author} value={this.state.author} onChange={this.handleAuthorChange}/>
             </FormGroup>
 
-            <Button bsStyle="success" type="submit" value="Update Recipe" >Update Recipe</Button>
+            <Button className="button" bsStyle="success" type="submit" value="Update Recipe" >Update Recipe</Button>
           </Form>
           </div>
         )

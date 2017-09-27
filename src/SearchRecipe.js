@@ -49,7 +49,7 @@ class SearchRecipe extends Component {
               onChange={this.handleDishChange} />
           </FormGroup>
           {' '}
-          <Button bsStyle="warning" onClick={() => {
+          <Button className="button" bsStyle="warning" onClick={() => {
             this.search()
           }}>Submit</Button>
         </Form>

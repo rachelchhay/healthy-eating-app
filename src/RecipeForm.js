@@ -101,7 +101,7 @@ class RecipeForm extends Component {
               type="text" value={this.state.author} onChange={this.handleAuthorChange}/>
           </FormGroup>
 
-          <Button bsStyle="warning" type="submit" value="Submit">Submit</Button>
+          <Button className="button" bsStyle="warning" type="submit" value="Submit">Submit</Button>
         </Form>
 
       </div>
