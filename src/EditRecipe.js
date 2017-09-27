@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './index.css';
+import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
+
 
 class EditRecipe extends Component {
   constructor(props) {
@@ -84,58 +87,55 @@ class EditRecipe extends Component {
   render() {
     return (
       <div className="individual-post">
-        <h2>{this.props.title}</h2>
-        <h3>Servings: {this.props.servings}</h3>
-        <h3>Cooking Time: {this.props.time}</h3>
+        <h2><strong>{this.props.title}</strong></h2>
+        <h4><strong>Servings:</strong> {this.props.servings}</h4>
+        <h4><strong>Cooking Time:</strong> {this.props.time}</h4>
         <p><strong>Ingredients:</strong> {this.props.ingredients}</p>
         <p><strong>Directions:</strong> {this.props.directions}</p>
         <h4>Author: <i>{this.props.author}</i></h4>
-        <button onClick={this.updatePost}>EDIT</button>
-        <button onClick={this.deletePost}>DELETE</button>
+        <Button className="button"  onClick={this.updatePost}>Edit</Button>
+        <Button className="button"   onClick={this.deletePost}>Delete</Button>
 
         { (this.state.update) ?
-          (<form onSubmit={ this.handlePostUpdate }>
-            <label>
-              Title:
-              <input type="text"
+          ( <div className="edit-form-container">
+            <Form className="edit-form" onSubmit={ this.handlePostUpdate }>
+            <FormGroup>
+              <ControlLabel>Title:</ControlLabel>
+              <FormControl type="text"
               placeholder={this.props.title} value={this.state.title} onChange={this.handleTitleChange}/>
-            </label>
-            <br/>
+            </FormGroup>
 
-            <label>
-              Servings:
-              <input type="number" placeholder={this.props.servings} value={this.state.servings} onChange={this.handleServingsChange}/>
-            </label>
-            <br/>
+            <FormGroup>
+              <ControlLabel>Servings:</ControlLabel>
+              <FormControl type="number" placeholder={this.props.servings} value={this.state.servings} onChange={this.handleServingsChange}/>
+            </FormGroup>
 
-            <label>
-              Time:
-              <input type="text"
+            <FormGroup>
+              <ControlLabel>Time:</ControlLabel>
+              <FormControl type="text"
                 placeholder={this.props.time} value={this.state.time} onChange={this.handleTimeChange}/>
-            </label>
-            <br/>
+            </FormGroup>
 
-            <label>
-              Ingredients:
+            <FormGroup>
+              <ControlLabel>Ingredients:</ControlLabel>
               <textarea placeholder={this.props.ingredients} value={this.state.ingredients} onChange={this.handleIngredientsChange}/>
-            </label>
-            <br/>
+            </FormGroup>
 
-            <label>
-              Directions:
+            <FormGroup>
+              <ControlLabel>Directions:</ControlLabel>
               <textarea placeholder={this.props.directions} value={this.state.directions} onChange={this.handleDirectionsChange}/>
-            </label>
-            <br/>
+            </FormGroup>
 
-            <label>
-              Author:
-              <input type="text"
+            <FormGroup>
+              <ControlLabel>Author:</ControlLabel>
+              <FormControl type="text"
                 placeholder={this.props.author} value={this.state.author} onChange={this.handleAuthorChange}/>
-            </label>
-            <br/>
+            </FormGroup>
 
-            <input type="submit" value="Update Recipe" />
-          </form>)
+            <Button bsStyle="success" type="submit" value="Update Recipe" >Update Recipe</Button>
+          </Form>
+          </div>
+        )
           : null
         }
       </div>

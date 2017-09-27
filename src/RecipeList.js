@@ -69,7 +69,7 @@ class RecipeList extends Component {
   render() {
     return (
       <div className="posts">
-        <h2 className="blog-posts">Blog Posts</h2>
+        <h1 className="blog-posts">Blog Posts</h1>
         <Recipe
         onPostUpdate={ this.handlePostUpdate }
         onPostDelete={ this.handlePostDelete }

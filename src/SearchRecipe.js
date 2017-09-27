@@ -41,7 +41,7 @@ class SearchRecipe extends Component {
 
         <Form inline>
           <FormGroup>
-            <ControlLabel>Ingredients:</ControlLabel>
+            <ControlLabel><h3>Ingredients:</h3></ControlLabel>
             {' '}
             <FormControl
               type="text"
@@ -49,7 +49,7 @@ class SearchRecipe extends Component {
               onChange={this.handleDishChange} />
           </FormGroup>
           {' '}
-          <Button onClick={() => {
+          <Button bsStyle="warning" onClick={() => {
             this.search()
           }}>Submit</Button>
         </Form>

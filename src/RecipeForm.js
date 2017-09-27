@@ -76,13 +76,13 @@ class RecipeForm extends Component {
 
           <FormGroup>
             <ControlLabel>Servings:</ControlLabel>
-            <FormControl type="number" value={this.state.servings} onChange={this.handleServingsChange}/>
+            <FormControl type="number" placeholder="Ex. 4" value={this.state.servings} onChange={this.handleServingsChange}/>
           </FormGroup>
 
           <FormGroup>
             <ControlLabel>Time:</ControlLabel>
             <FormControl type="text"
-              placeholder="1 hour and 30 mins" value={this.state.time} onChange={this.handleTimeChange}/>
+              placeholder="Ex. 1 hour and 30 mins" value={this.state.time} onChange={this.handleTimeChange}/>
           </FormGroup>
 
           <FormGroup>
@@ -101,7 +101,7 @@ class RecipeForm extends Component {
               type="text" value={this.state.author} onChange={this.handleAuthorChange}/>
           </FormGroup>
 
-          <input bsStyle="info" type="submit" value="Submit" />
+          <Button bsStyle="warning" type="submit" value="Submit">Submit</Button>
         </Form>
 
       </div>

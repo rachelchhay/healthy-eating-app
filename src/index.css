@@ -39,6 +39,8 @@ body {
   padding-left: 8%;
 }
 
+/*center forms*/
+
 .posts-form-container {
   display: block;
   text-align: center;
@@ -50,13 +52,30 @@ body {
   text-align: left;
 }
 
+.edit-form-container {
+  display: block;
+  text-align: center;
+}
+
+.edit-form {
+  width: 60%;
+  display: inline-block;
+  text-align: left;
+}
+
+.button {
+  margin: 20px;
+  background-color: #874C62;
+  color: #fff;
+}
+
 /*Post it code modified from
 https://mentormate.com/blog/css-postit-note/*/
 
 .individual-post {
   line-height: 1;
   text-align:center;
-  width: 1000px;
+  width: 80%;
   margin: 25px;
   min-height:500px;
   max-height:70%;
@@ -99,6 +118,10 @@ https://mentormate.com/blog/css-postit-note/*/
 .search {
   text-align: center;
   margin-top: 10%;
+}
+
+.search-title {
+  margin-bottom: 5%;
 }
 
 .search-item {
